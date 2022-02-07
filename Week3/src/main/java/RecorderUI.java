@@ -1,3 +1,7 @@
+
+import java.io.BufferedReader;
+import java.io.InputStreamReader;
+
 /*
  * To change this license header, choose License Headers in Project Properties.
  * To change this template file, choose Tools | Templates
@@ -8,26 +12,33 @@
  *
  * @author W20008404
  */
-public class Main {
+public class RecorderUI {
     
-    /**
-     * @param args the command line arguments
-     */
-    public static void main(String[] args) {
-        // TODO code application logic here
-        Recorder test = new Recorder();
-        /*
+    int numStudents;
+    Recorder test2;
+    
+    RecorderUI(Recorder Input){
+        test2 = Input;
+    }
+    
+    void display(){
         try
         {
             BufferedReader cons=new BufferedReader(new InputStreamReader(System.in)); 
             System.out.println("Enter the size of the student group:");
             numStudents = Integer.parseInt(cons.readLine());
+            test2.CreateClass(numStudents);
+            DisplayMarksEntry();
         }
-        catch(){
-            
-            
+        catch(Exception e){
+            System.out.println(e);
         }
-        */
+        
+    }
+    
+    void DisplayMarksEntry(){
+        
+        
     }
     
 }
